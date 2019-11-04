@@ -33,6 +33,7 @@ class PlaySoundsViewController: UIViewController {
     // MARK: - View methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAudio()
     }
     
     override func viewWillAppear(_ animated: Bool) {
