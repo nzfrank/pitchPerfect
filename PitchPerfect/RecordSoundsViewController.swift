@@ -17,6 +17,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
     
+    // MARK: View methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,12 +25,23 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewWillAppear(_ animated: Bool) {
         stopRecordingButton.isEnabled = false
     }
+    
+    private func configUI(isRecording: Bool) {
+        if isRecording {
+            recordLabel.text = "Record in progress"
+            recordButton.isEnabled = false
+            stopRecordingButton.isEnabled = true
+        }
+        else {
+            recordLabel.text = "Tap to record"
+            recordButton.isEnabled = true
+            stopRecordingButton.isEnabled = false
+        }
+    }
 
     // MARK: Audio functions
     @IBAction func recordAudio(_ sender: Any) {
-        recordLabel.text = "Record in progress"
-        recordButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
+        configUI(isRecording: true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -47,9 +59,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        recordLabel.text = "Tap to record"
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
+        configUI(isRecording: false)
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
