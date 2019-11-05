@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ6-9S-f53">
-                                <rect key="frame" x="129.5" y="397.5" width="155" height="155"/>
+                                <rect key="frame" x="129.5" y="347.5" width="155" height="155"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Record"/>
                                 <connections>
@@ -25,13 +25,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9n-xj-2BC">
-                                <rect key="frame" x="156" y="560.5" width="102" height="21"/>
+                                <rect key="frame" x="156" y="510.5" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUz-cH-IDD">
-                                <rect key="frame" x="175" y="589.5" width="64" height="64"/>
+                                <rect key="frame" x="175" y="539.5" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="4YL-Mp-Yqj"/>
                                     <constraint firstAttribute="height" constant="64" id="EQs-Dh-Cfn"/>
@@ -44,7 +44,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nQ6-9S-f53" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3FV-0U-c9m"/>
+                            <constraint firstItem="nQ6-9S-f53" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="3FV-0U-c9m"/>
                             <constraint firstItem="dUz-cH-IDD" firstAttribute="top" secondItem="z9n-xj-2BC" secondAttribute="bottom" constant="8" id="MDl-mD-fq8"/>
                             <constraint firstItem="dUz-cH-IDD" firstAttribute="centerX" secondItem="z9n-xj-2BC" secondAttribute="centerX" id="cmy-gg-IzA"/>
                             <constraint firstItem="nQ6-9S-f53" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fGc-cs-bcR"/>
