@@ -18,7 +18,7 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: Timer!
 
     enum ButtonType: Int {
-        case slow = 0, fast, chipmunk, vader, echo, reverb
+        case fast = 0, slow, chipmunk, vader, echo, reverb
     }
     
     // MARK: - Buttons
